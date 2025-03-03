@@ -174,30 +174,30 @@ Exercise 12: FizzBuzz with arrays
 
 Complete Exercise 12 in the space below:
 */
-let fizz = []
+let fizz = [];
 nums.forEach((number) => {
-    if (number % 3 === 0) {
-      fizz.push(number);
-    }
-  });
+  if (number % 3 === 0) {
+    fizz.push(number);
+  }
+});
 
-let buzz = []
+let buzz = [];
 nums.forEach((number) => {
-    if (number % 5 === 0) {
-      buzz.push(number);
-    }
-  });
+  if (number % 5 === 0) {
+    buzz.push(number);
+  }
+});
 
-let fizzbuzz = []
+let fizzbuzz = [];
 nums.forEach((number) => {
-    if (number % 3 === 0 && number % 5 === 0) {
-      fizzbuzz.push(number);
-    }
-  });
-console.log('Exercise 12 Results:');
-console.log('  fizz:', fizz);
-console.log('  buzz:', buzz);
-console.log('  fizzbuzz:', fizzbuzz);
+  if (number % 3 === 0 && number % 5 === 0) {
+    fizzbuzz.push(number);
+  }
+});
+console.log("Exercise 12 Results:");
+console.log("  fizz:", fizz);
+console.log("  buzz:", buzz);
+console.log("  fizzbuzz:", fizzbuzz);
 
 /*
 Exercise 13: Retrieve the Last Array
@@ -212,13 +212,13 @@ Complete Exercise 13 in the space below:
 */
 
 const numArrays = [
-	[100, 5, 23],
-	[15, 21, 72, 9],
-	[45, 66],
-	[7, 81, 90]
+  [100, 5, 23],
+  [15, 21, 72, 9],
+  [45, 66],
+  [7, 81, 90],
 ];
-let numList = numArrays[numArrays.length - 1]
-console.log('Exercise 13 result:', numList);
+let numList = numArrays[numArrays.length - 1];
+console.log("Exercise 13 result:", numList);
 
 /*
 Exercise 14: Accessing within nested arrays
@@ -233,7 +233,7 @@ Complete Exercise 14 in the space below:
 
 let num = numArrays[2][1];
 
-console.log('Exercise 14 result:', num);
+console.log("Exercise 14 result:", num);
 
 /*
 Exercise 15: Nested array sum
@@ -248,10 +248,11 @@ Hint: Be sure to declare and initialize the total variable before the iterations
 Complete Exercise 15 in the space below:
 */
 
-let total = []
-numArrays.forEach((num) => {
-    total = total + num; 
-})
+flattenedArray = numArrays.flat(2);
 
-console.log('Exercise 15 result:\n', total);
+let total = 0;
+for (let i = 0; i < flattenedArray.length; i++) {
+  total += flattenedArray[i];
+}
 
+console.log("Exercise 15 result:\n", total);
